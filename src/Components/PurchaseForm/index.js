@@ -3,7 +3,6 @@ import './Purchase.css'
 import React from 'react';
 import { Form, InputNumber, Input, Button, Steps } from 'antd';
 import { Row, Col } from 'antd';
-
 const { Option } = Select;
 const { Step } = Steps;
 const steps = [
@@ -92,6 +91,7 @@ class Purchase extends React.Component {
     phone, } = this.state;
 
     fetch('https://api.hsforms.com/submissions/v3/integration/submit/8315065/45cd9554-5ba5-4af9-a5cb-414760938624', {
+      headers : { 'content-type' : 'application/json'},
       method: 'POST',
       mode: 'no-cors',
       body: [
