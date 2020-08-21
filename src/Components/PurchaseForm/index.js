@@ -33,6 +33,7 @@ const steps = [
 class Purchase extends React.Component {
   constructor (props) {
     super (props) ;
+
     this.state = {
       current:  0,
       showMe:false,
@@ -67,6 +68,11 @@ class Purchase extends React.Component {
     this.setState({ current });
   }
 
+  
+
+ 
+
+
   onSubmit = (e) => {
     e.preventDefault();
     // get our form data out of state
@@ -84,6 +90,28 @@ class Purchase extends React.Component {
     lastName, 
     email,
     phone, } = this.state;
+
+    fetch('https://api.hsforms.com/submissions/v3/integration/submit/:portalId/:45cd9554-5ba5-4af9-a5cb-414760938624', {
+      method: 'POST',
+      body: [
+        streetAddress,
+    apartmentNumber,
+    city,
+    stateSelected,
+    zipCode,
+    secondInput,
+    income,
+    loanAmount,
+    employment,
+    liabilities,
+    firstName,
+    lastName, 
+    email,
+    phone
+      ],
+    });
+
+  
 
     console.log(streetAddress,
       apartmentNumber,
@@ -467,14 +495,14 @@ class Purchase extends React.Component {
           </Button>
           )}
         {current === steps.length - 1 && (
-          <Button type="submit" onClick={this.onSubmit}>
+          <Button htmlType="submit" onClick={this.onSubmit}>
             Done
           </Button>
           )}
          
       </div>
     </div>
-          
+         
     );
   }
 }
