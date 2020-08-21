@@ -1,0 +1,154 @@
+
+ .form-container{
+    
+    color: black; 
+ 
+}
+
+.form-container{
+    
+    margin-left: 15vw;
+    margin-right: 15vw;
+    margin-top: 10vh;
+}
+.purchase-form{
+    text-align: center;
+    font-size: 20%;
+    margin-left: 4vw;
+    margin-right: 4vw;
+    margin-top: 3vh;
+
+   
+}
+
+.yes-no-buttons {
+  width: inherit;
+}
+
+  
+
+.purchase-form{
+text-align: center;
+height: 30vh;
+
+
+
+}
+
+.input-number {
+width: 20vw; 
+margin-top: 5vh;
+}
+
+.select-button {
+width: 20vw; 
+margin-top: 5vh;
+
+}
+
+.contact-form-text {
+    font-size: 1.5vw;
+    font-family: serif;
+    float: left;
+    color: #2E294E;
+}
+
+.form-text {
+    font-size: 2vw;
+    font-family: serif;
+  
+    color: #2E294E;
+}
+
+@media(max-width: 480px){
+
+    .form-text {
+        font-size: 6vw;
+        font-family: serif;
+      
+        color: #2E294E;
+    }
+
+
+    .input-number{
+        width: 50vw; 
+        margin-top: 5vh;
+        -webkit-appearance: none;
+        -moz-appearance: textfield;
+    }
+
+    .select-button {
+        width: 50vw; 
+        margin-top: 5vh;
+        
+
+    }
+
+    .contact-form-text {
+        font-size: 4vw;
+        font-family: serif;
+        float: left;
+    }
+
+
+   
+    .form-container{
+    
+        margin-left: 2vw;
+        margin-right: 2vw;
+        margin-top: 2vh;
+    }
+   
+    .purchase-form{
+        text-align: center;
+        height: 30vh;
+        
+        
+        
+    }
+
+   .gutter-row-yes {
+       width: 40vw; 
+       float: left; 
+      
+   }
+
+   .gutter-row-no {
+    width: 40vw; 
+    float: right; 
+   
+}
+
+   .yes-no-buttons {
+       width: 100%; 
+       text-align: center;
+       margin-top: 3vh;
+   }
+     
+   
+    
+    p {
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+      .ant-form-item-control{
+          line-height: 30px;
+      }
+
+      .ant-steps-horizontal.ant-steps-label-horizontal .ant-steps-item-content {
+          min-height: 40px;
+      }
+
+      .go-back-button {
+        margin-right: 2px;
+        
+      }
+
+   }
+
+
+
+   
+  
+  
+  

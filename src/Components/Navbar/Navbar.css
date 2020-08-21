@@ -1,0 +1,21 @@
+
+.home-button {
+    color:#24305E; 
+    margin-top: 22px;
+    margin-left: 20px;
+    font-size: 22px;
+    display: inline-block;
+   
+ 
+ }
+ 
+ 
+ @media(min-width: 767px){
+ 
+    .home-button {
+       display: none;
+    }
+ 
+    
+ 
+ }

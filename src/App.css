@@ -1,38 +1,122 @@
-.App {
-  text-align: center;
+
+@import '~antd/dist/antd.css';
+
+
+.menuBar{
+ 
+ 
+  overflow: auto;
+  
+  margin-bottom: 3vh;
+}
+.logo{
+  width: 150px;
+  float: left;
+}
+.logo{
+  display: inline-block;
+  font-size: 20px;
+  padding: 19px 20px;
+  text-transform: capitalize;
+  color: black;  
+  font-family: serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.menuCon .ant-menu-item{
+  padding: 0px 5px;
+}
+.menuCon .ant-menu-submenu-title{
+  padding: 10px 20px;
+}
+.menuCon .ant-menu-item a, .menuCon .ant-menu-submenu-title a{
+  padding: 10px 15px;
+}
+.menuCon .ant-menu-horizontal{
+  border-bottom: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.barsMenu{
+  float: right;
+  height: 30px;
+  
+  display: none;
+  background: none;
+  border: none; 
+  margin-top: 5px;
+  margin-right: 5px;
+}
+.barsBtn{
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: black;
+  position: relative;
+}
+.barsBtn:after,.barsBtn:before{
+  content: attr(x);
+  width: 20px;
+  position: absolute;
+  top: -6px;
+  left: 0;
+  height: 2px;
+  background: black;
+}
+.barsBtn:after{
+  top: auto;
+  bottom: -6px;
+}
+.ant-drawer-body{
+  padding: 0;
+}
+.ant-drawer-body .ant-menu-horizontal > .ant-menu-item, .ant-drawer-body .ant-menu-horizontal > .ant-menu-submenu{
+  display: inline-block;
+  width: 100%;
+}
+.ant-drawer-body .ant-menu-horizontal{
+  border-bottom: none;
+}
+.ant-drawer-body .ant-menu-horizontal > .ant-menu-item:hover{
+  border-bottom-color: transparent;
+}
+
+.header {
+  background-color: #FFF;
+  height: 70px;
+}
+
+
+@media(max-width: 767px){
+  .barsMenu{
+    display: inline-block;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .leftMenu,.rightMenu{
+    display: none;
   }
-  to {
-    transform: rotate(360deg);
+  .logo {
+    margin-left: -20px;
   }
+  .menuCon .ant-menu-item, .menuCon .ant-menu-submenu-title{
+    padding: 1px 20px;
+  }
+  .logo{
+    padding: 10px 10px;
+  }
+  .mainContainer{
+    margin-top: 5vh; 
+  }
+
+ .right-container{
+   display: none;
+ }
+
+ .homepage-container{
+   text-align: center;
+ }
+
+ .header {
+  background-color: #FFF;
+  line-height: 2vh;
+  height: 8vh;
+}
+
 }

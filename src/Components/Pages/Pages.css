@@ -1,0 +1,43 @@
+
+
+
+.mainContainer {
+    
+    font-family: serif;
+    font-size: 3vh;
+    color: #2E294E;
+    background-color: #FFF;
+    height: 100vh;
+
+    
+}
+
+.homepage-container {
+    
+    background-color: #FFF;
+    margin-top: 12vh;
+        
+    
+}
+
+
+@media(max-width: 767px){
+
+
+    .mainContainer {
+ 
+    margin-top: 0px;
+    
+    
+    }
+
+    .home-screen-buttons {
+        margin-top: 5vh;
+    }
+
+    .definition-container {
+        margin-top: 1vh;
+    }
+
+
+}
