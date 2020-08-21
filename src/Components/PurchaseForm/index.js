@@ -93,6 +93,7 @@ class Purchase extends React.Component {
 
     fetch('https://forms.hubspot.com/uploads/form/45cd9554-5ba5-4af9-a5cb-414760938624', {
       method: 'POST',
+      mode: 'no-cors',
       body: [
         streetAddress,
     apartmentNumber,
