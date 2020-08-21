@@ -5,6 +5,8 @@ import { Form, InputNumber, Input, Button, Steps } from 'antd';
 import { Row, Col } from 'antd';
 const { Option } = Select;
 const { Step } = Steps;
+
+
 const steps = [
   {
     title: 'Property',
@@ -69,7 +71,6 @@ class Purchase extends React.Component {
 
   
 
- 
 
 
   onSubmit = (e) => {
@@ -90,31 +91,7 @@ class Purchase extends React.Component {
     email,
     phone, } = this.state;
 
-    fetch('https://api.hsforms.com/submissions/v3/integration/submit/8315065/45cd9554-5ba5-4af9-a5cb-414760938624', {
-      headers : { 'content-type' : 'application/json'},
-      method: 'POST',
-      mode: 'no-cors',
-      body: [
-        streetAddress,
-    apartmentNumber,
-    city,
-    stateSelected,
-    zipCode,
-    secondInput,
-    income,
-    loanAmount,
-    employment,
-    liabilities,
-    firstName,
-    lastName, 
-    email,
-    phone
-      ],
-    });
-
-  
-
-    console.log(streetAddress,
+    const data = {streetAddress,
       apartmentNumber,
       city,
       stateSelected,
@@ -127,7 +104,23 @@ class Purchase extends React.Component {
       firstName,
       lastName, 
       email,
-      phone, )
+      phone,
+  
+    }; 
+
+    var myJSON = JSON.stringify(data);
+
+    fetch('https://api.hsforms.com/submissions/v3/integration/submit/8315065/45cd9554-5ba5-4af9-a5cb-414760938624', {
+      headers : { 'content-type' : 'application/json'},
+      method: 'POST',
+      mode: 'no-cors',
+      body: myJSON, 
+        
+    });
+
+
+
+    console.log(myJSON )
   }
 
   // Only way that I could get the number state to be saved and parsed and what not
