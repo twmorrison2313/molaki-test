@@ -41,19 +41,19 @@ class Purchase extends React.Component {
       itsOk:false,
       loanAmount: [],
       disappear: true, 
-      streetAddress: '',
-      apartmentNumber: '',
-      city:'',
-      stateSelected:'',
+      streetAddress: "",
+      apartmentNumber: "",
+      city:"",
+      stateSelected:"",
       zipCode: [],
-      secondInput: '',
+      secondInput: "",
       income: [],
       employment: "",
       liabilities: [],
-      firstName: '',
-      lastName:'', 
-      email:'',
-      phone:'',
+      firstName: "",
+      lastName:"", 
+      email:"",
+      phone:"",
     }
   }
   
@@ -91,36 +91,33 @@ class Purchase extends React.Component {
     email,
     phone, } = this.state;
 
-    const data = {streetAddress,
-      apartmentNumber,
-      city,
-      stateSelected,
-      zipCode,
-      secondInput,
-      income,
-      loanAmount,
-      employment,
-      liabilities,
-      firstName,
-      lastName, 
-      email,
-      phone,
-  
-    }; 
+    var data = {
+      "fields": [
+        {"name": "loanAmount",
+        "value": loanAmount,
+      }
+       
+      ],
 
-    var myJSON = JSON.stringify(data);
+    }
+
+
 
     fetch('https://api.hsforms.com/submissions/v3/integration/submit/8315065/45cd9554-5ba5-4af9-a5cb-414760938624', {
-      headers : { 'content-type' : 'application/json'},
-      method: 'POST',
-      mode: 'no-cors',
-      body: myJSON, 
-        
-    });
+      headers: {
+        'Accept': 'application/json, text/plain, */*',
+        'Content-Type': 'application/json'
+      },
+    method: 'POST',
+    mode: 'no-cors',
+    body: JSON.stringify(data), 
+})
+    
+
+   
 
 
-
-    console.log(myJSON )
+    console.log(data )
   }
 
   // Only way that I could get the number state to be saved and parsed and what not
